@@ -132,7 +132,9 @@ Your runbook should look like the following at this point: <br>![Runbook authent
 
 ## Step 7 - Add activity to start a virtual machine
 
-We'll now add a **Start-AzureRmVM** activity to start a virtual machine.  You can pick any virtual machine in your Azure subscription, and for now we'll be hardcoding that name into the cmdlet.
+We'll now add a **Start-AzureRmVM** activity to start a virtual machine.  You can pick any virtual machine in your Azure subscription, and for now we'll be hardcoding that name into the cmdlet. 
+Note: **When you test/start the runbook with this hard coded value. 
+It would fail with "NotFound" status. Which is expected. Because, the VM is not available in your subscription yet**
 
 1. In the Library control, type **Start-AzureRm** in the search textbox.
 2. Add **Start-AzureRmVM** to the canvas and then click and drag it underneath **Connect to Azure**.
